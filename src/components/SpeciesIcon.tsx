@@ -18,7 +18,12 @@ const iconTypes: Map = {
   Hutt: <Hutt width={ICON_WIDTH} height={ICON_HEIGHT} />,
 };
 
-const IconComponent = (speciesName: string, gender: string) => {
+type Props = {
+  speciesName: string;
+  gender: string;
+};
+
+const IconComponent = ({speciesName, gender}: Props) => {
   if (speciesName === 'Human') {
     let Icon = iconTypes[gender];
     return Icon;

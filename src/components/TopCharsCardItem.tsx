@@ -14,7 +14,7 @@ export const TopCharsCardItem = ({item}: Props) => {
     <View style={styles.card}>
       <View style={styles.cardHeader}>
         <Text style={styles.name}>{item.name}</Text>
-        {IconComponent(item.speciesName, item.gender)}
+        <IconComponent speciesName={item.speciesName} gender={item.gender} />
       </View>
       <Text style={styles.gender}>Gender: {item.gender}</Text>
       <Text>Species: {item.speciesName}</Text>
